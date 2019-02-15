@@ -1,0 +1,29 @@
+Titre : Couplage fluide-structure OpenFOAM-Cast3m
+Auteur: Fabien Salmon
+Date : 15 février 2019
+Lien : https://github.com/FabienSalmon/Couplage.git
+
+Composition :
+- 2 scripts Python
+- 1 exécutable appelé 'Thermo_meca'
+
+Attention : l'algorithme requiert le logiciel GMSH pour réaliser le maillage
+
+
+
+La description de ce programme est effectuée dans la thèse intitulée 
+"Simulation aéro-thermo-mécanique des effets du feu sur les parois d'un milieu confiné. 
+Application à l'étude des thermo-altérations de la grotte Chauvet-Pont d'Arc" (F. Salmon).
+
+Le procédé est détaillé dans la partie 2.4 du manuscrit.
+Les erreurs éventuellement rencontrées lors de l'exécution du programme et leurs solutions
+sont indiquées dans l'annexe E.
+
+Procédure effectuée par l'exécutable 'Thermo_meca' :
+1) Création d'un dossier 'CASTEM' dans le répertoire du calcul OpenFOAM.
+2) Exécution du script Mailleur.py.
+3) Réalisation du maillage par le logiciel GMSH.
+4) Exécution du script FichierCastem.py.
+5) Exécution du fichier .dgibi écrit par l'intermédiaire du script FichierCastem.py
+
+Il est conseillé de réaliser chaque pas les uns à la suite des autres dans un terminal.
