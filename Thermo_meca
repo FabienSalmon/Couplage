@@ -1,0 +1,7 @@
+#!/bin/sh
+mkdir CASTEM
+python Mailleur.py
+
+#Chemin de GMSH a modifier
+~/gmsh-3.0.6-Linux64/bin/gmsh CASTEM/Maillage.geo -2 -format unv
+python FichierCastem.py
